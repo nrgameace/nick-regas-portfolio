@@ -17,7 +17,7 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Form validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast({
@@ -39,12 +39,18 @@ export const ContactSection = () => {
       return;
     }
 
-    // TODO: Implement actual email sending logic here
+    // Create mailto link
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
+    window.location.href = `mailto:n.a.regas@wustl.edu?subject=${subject}&body=${body}`;
+
+    // Show success toast
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Opening email client...",
+      description: "Your default mail app will open to send the message.",
     });
 
+    // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
