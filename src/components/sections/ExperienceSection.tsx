@@ -1,39 +1,39 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-// PLACEHOLDER EXPERIENCES - Replace with your actual experiences
 const experiences = [
   {
-    title: "Software Engineering Intern",
-    company: "Tech Company",
+    title: "IT Specialist & Consultant",
+    company: "Patel Law Offices",
+    period: "November 2024 - Present",
+    description: "Manage and maintain 10+ WordPress websites on IONOS hosting, ensuring optimal performance, security, and runtime. Develop automation workflows and optimize IT infrastructure for a legal practice.",
+    achievements: [
+      "Developed 20+ Zapier automation workflows linking Gmail, Mailchimp, Google Contacts, and LexHelper, improving efficiency by 40%",
+      "Refurbished and redeployed 5 outdated computers and servers, saving over $1,000 in hardware costs",
+      "Enabled 5+ legacy and x86-only applications on ARM-based laptops through emulation solutions",
+    ],
+  },
+  {
+    title: "Research Scholar",
+    company: "The Governor's School of New Jersey Program in Engineering & Technology",
     period: "Summer 2024",
-    description: "Developed full-stack features for core product, working with React, Node.js, and PostgreSQL. Improved system performance by 30% through optimization.",
+    description: "Conducted advanced research on pathfinding algorithms for unmanned aerial vehicles in collaboration with Lockheed Martin. Competitively selected as one of 60 scholars from New Jersey for this rigorous, month-long program.",
     achievements: [
-      "Built scalable microservices architecture",
-      "Implemented CI/CD pipeline",
-      "Mentored junior developers",
+      "Developed and tested A* & RRT* pathfinding algorithms for UAVs, identifying the most efficient navigation strategies",
+      "Selected to present research at MIT's Undergraduate Research Technology Conference",
+      "Published paper in IEEE Proceedings",
+      "Mastered challenging coursework in Theoretical Physics, Robotics, Microcontroller Programming (C++), and Unity game design",
     ],
   },
   {
-    title: "Research Assistant",
-    company: "WashU AI Lab",
-    period: "2023 - Present",
-    description: "Conducting research in machine learning and computer vision, focusing on autonomous systems and real-time object detection.",
+    title: "Code Coach",
+    company: "The Coder School",
+    period: "June 2023 - August 2023",
+    description: "Taught programming fundamentals and robotics to elementary school students, creating engaging, hands-on learning experiences that made computing accessible and fun.",
     achievements: [
-      "Published paper on neural network optimization",
-      "Developed novel algorithm for image processing",
-      "Collaborated with cross-functional teams",
-    ],
-  },
-  {
-    title: "Head Drum Major",
-    company: "University Marching Band",
-    period: "2022 - 2024",
-    description: "Led a team of 200+ members, managing operations, coordinating rehearsals, and developing leadership skills.",
-    achievements: [
-      "Coordinated 50+ performances and events",
-      "Improved team efficiency by 40%",
-      "Mentored section leaders",
+      "Taught programming and game logic to 12 elementary school students using Minecraft Education",
+      "Led robotics sessions where students built and programmed robots using block-based Python coding",
+      "Empowered students to understand fundamental computing concepts through dynamic, engaging lessons",
     ],
   },
 ];

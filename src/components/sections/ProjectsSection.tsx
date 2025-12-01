@@ -4,33 +4,32 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 
-// PLACEHOLDER PROJECTS - Replace with your actual projects
 const projects = [
   {
-    title: "AI-Powered Trading System",
-    description: "Machine learning model for algorithmic trading with real-time market analysis and automated decision-making.",
-    tags: ["Python", "TensorFlow", "React", "Node.js"],
+    title: "Stock Market Prediction Using AI-Based Analysis of News Headlines",
+    description: "Built and trained a neural network using PyTorch to predict stock market movements from news headlines, achieving 60% prediction accuracy and demonstrating the potential of NLP-driven financial forecasting.",
+    tags: ["Python", "PyTorch", "pandas", "XGBoost"],
     github: "https://github.com/nrgameace",
     demo: null,
   },
   {
-    title: "Autonomous Navigation System",
-    description: "Computer vision-based navigation system for autonomous vehicles using deep learning and sensor fusion.",
-    tags: ["C++", "ROS", "OpenCV", "PyTorch"],
+    title: "Analysis of A* and RRT* Pathfinding Algorithms for Drone Navigation",
+    description: "Spearheaded research analyzing A* vs. RRT* for drone navigation, finding A* 3-5x faster while RRT* offered superior flight efficiency. Conducted real-world drone trials with DJI Tello EDU and visualized performance across diverse maze types.",
+    tags: ["Python", "PyGame", "DJI Tello API", "C++"],
     github: "https://github.com/nrgameace",
     demo: null,
   },
   {
-    title: "Cybersecurity Analytics Platform",
-    description: "Real-time threat detection and analysis platform using advanced pattern recognition and anomaly detection.",
-    tags: ["Python", "Django", "PostgreSQL", "D3.js"],
+    title: "IT Infrastructure & Automation Solutions",
+    description: "Developed 20+ Zapier automation workflows and managed 10+ WordPress websites, improving operational efficiency by 40%. Implemented emulation solutions for legacy application compatibility on ARM architectures.",
+    tags: ["WordPress", "Zapier", "IONOS", "System Administration"],
     github: "https://github.com/nrgameace",
     demo: null,
   },
   {
-    title: "Full-Stack Web Application",
-    description: "Modern web application with microservices architecture, featuring user authentication and real-time data processing.",
-    tags: ["TypeScript", "React", "Express", "MongoDB"],
+    title: "Educational Robotics & Programming Platform",
+    description: "Designed and delivered interactive programming curriculum for elementary students using Minecraft Education and block-based Python, empowering 12 students with fundamental computing concepts.",
+    tags: ["Python", "Minecraft Education", "Robotics", "Education"],
     github: "https://github.com/nrgameace",
     demo: null,
   },
