@@ -3,6 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const experiences = [
   {
+  title: "Incoming Machine Learning Research Intern - Supercomputing",
+  company: "Rutgers University at New Brunswick, Dr. Zaho Zhang's Machine Learning Research Lab",
+  period: "Summer 2026",
+  description: "Design and optimize machine learning algorithms for supercomputing environments, improving computational efficiency and scalability for large-scale AI applications.",
+  achievements: [
+    "To be involved in cutting-edge research on machine learning techniques tailored for high-performance computing systems",
+    "Collaborate with a team of researchers to develop innovative solutions that enhance AI model training and inference on supercomputers",
+    "Contribute to academic publications and presentations at leading AI and supercomputing conferences",
+  ],
+  },
+  {
     title: "IT Specialist & Consultant",
     company: "Patel Law Offices",
     period: "November 2024 - Present",

@@ -1,37 +1,66 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, FileText } from "lucide-react";
 
 const projects = [
   {
-    title: "Stock Market Prediction Using AI-Based Analysis of News Headlines",
-    description: "Built and trained a neural network using PyTorch to predict stock market movements from news headlines, achieving 60% prediction accuracy and demonstrating the potential of NLP-driven financial forecasting.",
-    tags: ["Python", "PyTorch", "pandas", "XGBoost"],
-    github: "https://github.com/nrgameace",
+    title: "Machine Learning–Based Stock Portfolio Optimizer",
+    description:
+      "Designed and implemented an end-to-end ML-powered portfolio optimizer. Built a data pipeline for historical market data, trained a Random Forest model to forecast daily returns, and integrated predictions into a custom backtesting engine with mean-variance optimization. Achieved consistent performance improvements over an S&P 500 benchmark in simulation.",
+    tags: [
+      "Python",
+      "scikit-learn",
+      "pandas",
+      "NumPy",
+      "Finance",
+      "Machine Learning",
+      "Backtesting",
+    ],
+    github: "https://github.com/nrgameace/StockPortfolioOptimizer",
     demo: null,
+    report: null,
+  },
+  {
+  title: "Handwritten Digit Classification Using K-Means Clustering",
+  description:
+    "Recreated and improved the K-Means clustering algorithm from scratch to classify MNIST handwritten digits. Implemented K-Means++ initialization, Euclidean-distance-based assignment, centroid recomputation, and an outlier-detection system based on statistical distance thresholds. Achieved 78% classification accuracy on the test set and identified high-variance outliers, demonstrating how unsupervised learning can reveal structure in high-dimensional image data.",
+  tags: [
+    "MATLAB",
+    "Machine Learning",
+    "Unsupervised Learning",
+    "K-Means",
+    "Data Analysis"
+  ],
+  github: "https://github.com/nrgameace/Handwritten-Digit-Classification-Using-K-Means-Clustering",   // or specific repo if you upload code
+  demo: null,
+  report: "https://drive.google.com/file/d/17r9EtcVT9_izzu0qHtmZd0d9M-x3GvbP/view?usp=sharing"
+  },
+  {
+    title: "Stock Market Prediction Using AI-Driven News Headline Analysis",
+    description:
+      "Trained a neural network using PyTorch to classify market direction using financial news headlines. Achieved 60% accuracy and demonstrated the viability of NLP-based market signal extraction.",
+    tags: ["Python", "PyTorch", "pandas", "NLP", "XGBoost"],
+    github:
+      "https://github.com/nrgameace/StockMarketPredictionUsingAIAnalysisofHeadlines",
+    demo: null,
+    report: null,
   },
   {
     title: "Analysis of A* and RRT* Pathfinding Algorithms for Drone Navigation",
-    description: "Spearheaded research analyzing A* vs. RRT* for drone navigation, finding A* 3-5x faster while RRT* offered superior flight efficiency. Conducted real-world drone trials with DJI Tello EDU and visualized performance across diverse maze types.",
-    tags: ["Python", "PyGame", "DJI Tello API", "C++"],
-    github: "https://github.com/nrgameace",
+    description:
+      "Conducted comparative research between A* and RRT* for autonomous drone navigation. Found A* to be 3-5x faster, while RRT* produced smoother and more efficient paths. Implemented simulations using PyGame and executed real-world tests on the DJI Tello EDU.",
+    tags: ["Python", "PyGame", "DJI Tello API", "Algorithmic Pathfinding"],
+    github: "https://github.com/nrgameace/GSETAutonomousDroneResearchProject",
     demo: null,
-  },
-  {
-    title: "IT Infrastructure & Automation Solutions",
-    description: "Developed 20+ Zapier automation workflows and managed 10+ WordPress websites, improving operational efficiency by 40%. Implemented emulation solutions for legacy application compatibility on ARM architectures.",
-    tags: ["WordPress", "Zapier", "IONOS", "System Administration"],
-    github: "https://github.com/nrgameace",
-    demo: null,
-  },
-  {
-    title: "Educational Robotics & Programming Platform",
-    description: "Designed and delivered interactive programming curriculum for elementary students using Minecraft Education and block-based Python, empowering 12 students with fundamental computing concepts.",
-    tags: ["Python", "Minecraft Education", "Robotics", "Education"],
-    github: "https://github.com/nrgameace",
-    demo: null,
+    report: "https://drive.google.com/file/d/1ekhDYca4KmztGw5VgzEJipM4wT3kJcBb/view",
   },
 ];
 
@@ -61,9 +90,12 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Featured Projects
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of my recent work in AI, autonomous systems, and full-stack development
+            A selection of my recent work in AI, autonomous systems, and
+            full-stack development
           </p>
         </motion.div>
 
@@ -83,6 +115,7 @@ export const ProjectsSection = () => {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
+
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
@@ -91,18 +124,44 @@ export const ProjectsSection = () => {
                       </Badge>
                     ))}
                   </div>
+
                   <div className="flex gap-3">
+                    {/* GitHub */}
                     <Button variant="outline" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="mr-2 h-4 w-4" />
                         GitHub
                       </a>
                     </Button>
+
+                    {/* Demo (optional) */}
                     {project.demo && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           Demo
+                        </a>
+                      </Button>
+                    )}
+
+                    {/* Report (optional) */}
+                    {project.report && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={project.report}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FileText className="mr-2 h-4 w-4" />
+                          Report
                         </a>
                       </Button>
                     )}
